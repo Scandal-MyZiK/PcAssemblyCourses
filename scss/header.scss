@@ -1,0 +1,215 @@
+.header {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-image: url(../images/header-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    &__btn {
+        @media (max-width: 1000px) {
+            margin-left: auto;
+            margin-right: 26px;
+            position: relative;
+        }
+    }
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 38px 80px 38px;
+        @media (max-width: 1150px) {
+            padding: 38px 0 38px;
+            width: 90%;
+            margin: 0 auto;
+        }
+    }
+    &__logo {
+        max-width: 40px;
+        @media (max-width: 1000px) {
+            position: relative;
+            z-index: 20;
+        }
+    }
+    &__title {
+        font-weight: 700;
+        font-size: 64px;
+        line-height: 140%;
+        width: 920px;
+        @media (max-width: 1000px) {
+            max-width: 100%;
+        }
+        @media (max-width: 800px) {
+            text-align: center;
+            font-size: 60px;
+            line-height: 130%;
+        }
+        @media (max-width: 710px) {
+            font-size: 50px;
+            line-height: 120%;
+        }
+        @media (max-width: 450px) {
+            font-size: 38px;
+        }
+    }
+    &__bottom {
+        background-color: $black;
+        padding: 28px 0;
+    }
+    &__count {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__money {
+        @media (max-width: 800px) {
+            margin-top: 10px;
+            width: 100%;
+        }
+    }
+}
+
+.header-menu {
+    &__list {
+        display: flex;
+        gap: 56px;
+        @media (max-width: 1150px) {
+            gap: 32px;
+        }
+        @media (max-width: 1000px) {
+            transform: translateY(-150%);
+            transition: all 0.5s;
+            display: block;
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            background-color: $black;
+            width: 100%;
+            padding-top: 100px;
+            padding-bottom: 30px;
+            text-align: center;
+        }
+    }
+    &__list.active {
+        @media (max-width: 1000px) {
+            transform: translateY(0);
+        }
+    }
+    &__item {
+        @media (max-width: 1000px) {
+            padding: 0 0 10px 0;
+        }
+    }
+    &__link {
+        transition: color 0.5s;
+        @media (max-width: 1000px) {
+            display: block;
+            font-size: 18px;
+            font-weight: 500;
+        }
+        &:hover {
+            color: $error-color;
+        }
+    }
+}
+
+.header-timer {
+    gap: 30px;
+    display: flex;
+    @media (max-width: 800px) {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    @media (max-width: 490px) {
+        gap: 14px;
+    }
+    &__item {
+        background-color: $black;
+        padding: 20px 30px;
+        @media (max-width: 1024px) {
+            padding: 6px 30px;
+        }
+        @media (max-width: 710px) {
+            padding: 10px 24px;
+            text-align: center;
+        }
+        @media (max-width: 490px) {
+            padding: 10px 20px;
+        }
+        @media (max-width: 400px) {
+            padding: 2px 12px;
+        }
+    }
+    &__number {
+        font-weight: 700;
+        font-size: 36px;
+        margin: 0;
+        @media (max-width: 710px) {
+            font-size: 28px;
+        }
+        @media (max-width: 400px) {
+            font-size: 20px;
+        }
+    }
+    &__time {
+        opacity: 0.4;
+        margin: 0;
+        @media (max-width: 400px) {
+            font-size: 14px;
+        }
+    }
+}
+
+.header-bottom {
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+}
+
+.header-people {
+    @media (max-width: 440px) {
+        margin: 16px 0 0;
+    }
+    &__item {
+        width: 250px;
+        display: flex;
+        justify-content: space-between;
+        &--big {
+            width: 280px;
+        }
+    }
+    &__type {
+        opacity: 0.4;
+    }
+    &__value {
+        font-weight: 700;
+    }
+}
+
+.header-statistics {
+    width: 718px;
+    height: 6px;
+    background-color: $white;
+    @media (max-width: 1280px) {
+        width: 518px;
+    }
+    @media (max-width: 1180px) {
+        width: 450px;
+    }
+    @media (max-width: 1000px) {
+        width: 300px;
+    }
+    @media (max-width: 800px) {
+        width: 100%;
+    }
+    &__complete {
+        display: block;
+        height: 6px;
+        width: 60%;
+        background: $bth-gradient;
+    }
+}

@@ -1,0 +1,104 @@
+.program {
+    padding: 246px 0 216px;
+    @media (max-width: 860px) {
+        padding: 146px 0 116px;
+    }
+    @media (max-width: 375px) {
+        padding: 50px 0 50px;
+    }
+    &__top {
+        max-width: 484px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+        margin: 0 auto 80px;
+    }
+    &__img {
+        @media (max-width: 630px) {
+            width: 140px;
+        }
+    }
+    &__subtitle {
+        margin: 30px 0;
+        @media (max-width: 630px) {
+            margin: 0 0 30px 0;
+            font-size: 36px;
+        }
+        @media (max-width: 375px) {
+            font-size: 34px;
+        }
+    }
+    &__description {
+        max-width: 411px;
+        opacity: 0.5;
+        @media (max-width: 375px) {
+            font-size: 14px;
+        }
+    }
+    &__list {
+        max-width: 582px;
+        margin: 0 auto;
+        position: relative;
+        &::after {
+            display: block;
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            margin: auto;
+            width: 6px;
+            height: 100%;
+            background: $bth-gradient-2;
+            @media (max-width: 670px) {
+                right: auto;
+            }
+        }
+    }
+    &__item {
+        width: 228px;
+        position: relative;
+        &:nth-child(even) {
+            margin-left: auto;
+            @media (max-width: 670px) {
+                margin: 0 0 30px 76px;
+            }
+            &::after {
+                left: -60px;
+                @media (max-width: 670px) {
+                    left: -70px;
+                }
+            }
+        }
+        &:nth-child(odd) {
+            text-align: right;
+            @media (max-width: 670px) {
+                text-align: left;
+                margin: 0 0 30px 76px;
+            }
+            &::after {
+                right: -60px;
+                @media (max-width: 670px) {
+                    right: 258px;
+                }
+            }
+        }
+        &::after {
+            display: block;
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 1px;
+            background: $white;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            opacity: 0.3;
+        }
+    }
+    &__week {
+        padding-bottom: 15px;
+        opacity: 0.5;
+    }
+}
